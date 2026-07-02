@@ -79,3 +79,103 @@ header p {
 		width: 120px;
 	}
 }
+
+/* Timeline cards container */
+.timeline {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x proximity;
+	gap: 1rem;
+	width: min(100%, calc((4 * 280px) + (3 * 1rem)));
+	margin: 0 auto;
+	padding: 2rem 0;
+	background-color: #f4f8fb;
+}
+
+/* Square timeline cards */
+.timeline-card {
+	position: relative;
+	flex: 0 0 280px;
+	width: 280px;
+	height: 280px;
+	padding: 0.85rem;
+	background-color: #ffffff;
+	border: 2px solid #d7e4ef;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	scroll-snap-align: start;
+	transition: transform 0.2s ease;
+}
+
+.timeline-card:hover {
+	transform: translateY(-4px);
+}
+
+.timeline-card h2 {
+	font-size: 1.1rem;
+	color: var(--intel-blue-dark);
+	margin-bottom: 0.15rem;
+}
+
+.timeline-card h3 {
+	font-size: 0.95rem;
+	color: #243b53;
+	margin-bottom: 0.65rem;
+}
+
+/* Image area inside each card */
+.card-image {
+	width: 100%;
+	height: 165px;
+	border: 2px solid #9ab8ce;
+	border-radius: 8px;
+	background: linear-gradient(135deg, #eef6fd, #dceefa);
+	display: block;
+	object-fit: cover;
+}
+
+/* Hidden by default, appears over the card on hover */
+.timeline-card p {
+	position: absolute;
+	inset: 0;
+	padding: 1rem;
+	background-color: rgba(0, 60, 113, 0.92);
+	color: #ffffff;
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.timeline-card:hover p {
+	opacity: 1;
+}
+
+.timeline-tip {
+	text-align: center;
+	font-size: 0.95rem;
+	padding: 0 1rem 1.75rem;
+	color: #425466;
+}
+
+/* Stack cards vertically on smaller screens */
+@media (max-width: 900px) {
+	.timeline {
+		flex-direction: column;
+		width: 100%;
+		overflow-x: visible;
+		scroll-snap-type: none;
+		align-items: center;
+		padding: 2rem 1rem;
+	}
+
+	.timeline-card {
+		flex: 0 1 auto;
+		width: min(92vw, 320px);
+	}
+}
