@@ -163,6 +163,15 @@ header p {
 	color: #425466;
 }
 
+/* Match new section headings to Intel theme heading color */
+.sustainability-columns .card-title {
+	color: var(--intel-blue-dark);
+}
+
+.card-text.mb-0 {
+	margin-bottom: 15px !important;
+}
+
 /* Stack cards vertically on smaller screens */
 @media (max-width: 900px) {
 	.timeline {
