@@ -172,6 +172,76 @@ header p {
 	margin-bottom: 15px !important;
 }
 
+.subscription-form {
+  padding: 3rem 1rem;
+  background-color: #f4f8fb;
+}
+
+.subscription-form form {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.subscription-form h2 {
+  color: var(--intel-blue-dark);
+  text-align: center;
+	margin-bottom: 1.25rem;
+}
+
+.subscription-form .form-group {
+	margin-bottom: 1rem;
+}
+
+.subscription-form .form-check {
+	margin: 0.5rem 0 1.25rem;
+}
+
+.subscription-form .btn {
+	min-width: 130px;
+}
+
+/* Footer styling with a background similar to the hero section */
+.site-footer {
+	padding: 1.5rem 1rem;
+	background:
+		radial-gradient(circle at 20% 25%, rgba(0, 199, 253, 0.2), transparent 38%),
+		radial-gradient(circle at 82% 78%, rgba(255, 255, 255, 0.12), transparent 32%),
+		linear-gradient(135deg, var(--intel-blue-dark), var(--intel-blue));
+	color: var(--text-on-dark);
+}
+
+.footer-inner {
+	max-width: 980px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.footer-inner p {
+	margin-bottom: 0.8rem;
+}
+
+.footer-inner nav {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.footer-inner a {
+	color: var(--text-on-dark);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.footer-inner a:hover {
+	text-decoration: underline;
+}
+
 /* Stack cards vertically on smaller screens */
 @media (max-width: 900px) {
 	.timeline {
@@ -186,5 +256,9 @@ header p {
 	.timeline-card {
 		flex: 0 1 auto;
 		width: min(92vw, 320px);
+	}
+
+	.subscription-form form {
+		padding: 1.2rem;
 	}
 }
