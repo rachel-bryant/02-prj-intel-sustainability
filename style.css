@@ -198,7 +198,11 @@ header p {
 }
 
 .subscription-form .form-check {
-	margin: 0.5rem 0 1.25rem;
+	margin: 0.4rem 0 0.6rem;
+}
+
+.subscription-form .form-check:last-of-type {
+	margin-bottom: 1.25rem;
 }
 
 .subscription-form .btn {
